@@ -1,0 +1,26 @@
+{
+  "name": "elemental-movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahidshaikhs/Elemental-Movies.git"
+  },
+  "author": "Shahid Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahidshaikhs/Elemental-Movies/issues"
+  },
+  "homepage": "https://github.com/shahidshaikhs/Elemental-Movies#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
