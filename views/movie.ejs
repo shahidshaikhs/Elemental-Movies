@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+<section class="container">
+  <div class="movie-main-container">
+    <div class="image-container" style="background-image: url('https://image.tmdb.org/t/p/original<%- data.backdrop_path %>');"></div>
+    <div class="movie-stats">
+        <h1><%- data.title %></h1>
+        <p class="movie-stats-category">Popularity : <span class="rating"><%- data.popularity %></span></p>
+        <div class="seperator"></div>
+        <p><%- data.overview %></p>
+        <div class="seperator"></div>
+        <p class="movie-stats-category">Release Date : <span class="date"><%- data.release_date %></span></p>
+        <p class="movie-stats-category">Vote Average : <span class="date"><%- data.vote_average %></span></p>
+        <p class="movie-stats-category">Language : <span class="date"><%- data.original_language %></span></p>
+        <p class="movie-stats-category">Adult : <span class="date"><%- data.adult %></span></p>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer'); -%>

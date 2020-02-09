@@ -1,20 +1,12 @@
 <%- include('partials/header'); -%>
-<section class="nav-container">
-  <div class="container">
-    <nav>
-      <img src="/images/logo-white.png" alt="" />
-      <ul>
-        <li>About</li>
-        <li>Newsletter</li>
-        <li>Login</li>
-      </ul>
-    </nav>
-  </div>
+<div class="nav-backdrop">
   <div class="watch-now">
     <h4>Kimi no Na Wa</h4>
     <p>2016 ‧ Drama/Fantasy ‧ 1h 52m</p>
     <button>Watch Now</button>
   </div>
+</div>
+
 </section>
 
 <section class="section-two">
@@ -22,11 +14,11 @@
     <div class="movies-grid">
       <% for(var i=0; i < data.length; i++) { %>
 
-      <div class="movies-card">
+      <a href="/movie/<%- data[i].id %>" class="movies-card">
         <div class="movies-img" style="background-image:url('https://image.tmdb.org/t/p/w500<%- data[i].poster_path %>')"></div>
         <h1 class="movie-title"><%- data[i].title %></h1>
         <p class="movie-overview"><%- data[i].overview.substring(1, 100) %></p>
-      </div>
+      </a>
       <% } %>
     </div>
   </div>
