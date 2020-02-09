@@ -23,12 +23,12 @@ app.get('/', (req, res) => {
   axios
     .get(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.APIkey}&language=en-US&page=1`)
     .then(response => {
-        res.render('home', {data : JSON.stringify(response.data)});
+      res.render('home', { data: response.data.results });
+      // console.log(response.data.results[0].title);
     })
     .catch(err => {
       console.log(`Error occured ${err}`);
     });
-
 });
 
 app.listen(process.env.PORT || 80, () => {

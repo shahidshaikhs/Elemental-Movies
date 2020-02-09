@@ -19,17 +19,16 @@
 
 <section class="section-two">
   <div class="container">
-    <div class="movies-grid"></div>
-    <%= data %>
-    <% for(var i=0; i < data.length; i++) { %>
+    <div class="movies-grid">
+      <% for(var i=0; i < data.length; i++) { %>
+
       <div class="movies-card">
-        <div class="movies-img" style="background-image:url('https://image.tmdb.org/t/p/w500${movie.poster_path}')">
-        </div>
-        <h1 class="movie-title"><%= data[i].title %></h1>
-        <!-- <p class="movie-overview">${movie.overview.substring(1, 100)}</p> -->
+        <div class="movies-img" style="background-image:url('https://image.tmdb.org/t/p/w500<%- data[i].poster_path %>')"></div>
+        <h1 class="movie-title"><%- data[i].title %></h1>
+        <p class="movie-overview"><%- data[i].overview.substring(1, 100) %></p>
       </div>
-    <% } %>
-  </div>
+      <% } %>
+    </div>
   </div>
 </section>
 <%- include('partials/footer'); -%>
